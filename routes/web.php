@@ -1,7 +1,7 @@
 <?php
-
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::post('/registeruser',[RegisterController::class,'register']);
+Route::post('/loginuser',[LoginController::class, 'loginUser']);
