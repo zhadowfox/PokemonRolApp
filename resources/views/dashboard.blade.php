@@ -1,4 +1,4 @@
-authenticated<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -11,7 +11,7 @@ authenticated<!DOCTYPE html>
         <style>
         </style>
     </head>
-    <body class="bg-gradient-to-b  from-black from-0% to-slate-700 h-screen poppins" >
-        LOGUEDO
+    <body class="bg-gradient-to-b  from-black from-0% to-slate-700 h-screen poppins p-0 m-0" >
+        @include('header.header')
     </body>
 </html>
