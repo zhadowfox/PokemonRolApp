@@ -9,9 +9,10 @@
         @vite('resources/css/app.css')
         @livewireStyles
         <style>
-        </style>
+        </style>    
     </head>
-    <body class="bg-gradient-to-b  from-black from-0% to-slate-700 h-screen poppins p-0 m-0" >
-        @include('header.header')
+    <body class="bg-gradient-to-b  from-black from-0% to-slate-700 min-h-screen poppins p-0 m-0" >
+            @include('livewire.player-dashboard')
+            @livewireScripts
     </body>
 </html>

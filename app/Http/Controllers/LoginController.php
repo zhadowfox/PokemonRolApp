@@ -8,7 +8,7 @@ class LoginController extends Controller
     public function loginUser(LoginRequest $request){    
         $credentials= $request->only("username","password");
         if (!Auth::validate($credentials)) {
-            return redirect()->to("/")->withError('auth.failed');
+            return redirect()->to("/")->with('error', 'Error: Usuario o Contraseña Incorrecta');
         }
         $usuario= Auth::getProvider()->retrieveByCredentials($credentials);
         Auth::login($usuario);
